@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link type="text/css" rel="stylesheet" href="style.css">
+
+        <title>Pig Game</title>
+    </head>
+
+    <body>
+        <div class="wrapper clearfix">
+            <a href= "#info" class="btn-rules" title="Rules">
+                <svg class="btn-icon">
+                    <use xlink:href="feather-sprite.svg#info"></use>
+                </svg>
+            </a>
+            <div class="rules" id="info">
+                <a href="#">&times;</a>
+                <h1>Rules</h1>
+                <ul>
+                    <li>The game has 2 players, playing in rounds</li>
+                    <li>In each turn, a player rolls two dices as many times as he whishes. Each result get added to his ROUND score</li>
+                    <li>BUT, if the player rolls two 1s, all his ROUND score gets lost. After that, it's the next player's turn</li>
+                    <li>AND, if the player rolls two 6s, all his SCORE gets lost. After that, it's the next player's turn</li>
+                    <li>The player can choose to 'Hold', which means that his ROUND score gets added to his GLOBAL score. After that, it's the next player's turn</li>
+                    <li>The first player to reach Winning Score (Default 100) on GLOBAL score wins the game!</li>
+                </ul>
+            </div>
+            <div class="player-0-panel active">
+                <div class="player-name" id="name-0">Player 1</div>
+                <div class="player-score" id="score-0">43</div>
+                <div class="player-current-box">
+                    <div class="player-current-label">Current</div>
+                    <div class="player-current-score" id="current-0">11</div>
+                </div>
+            </div>
+
+            <div class="player-1-panel">
+                <div class="player-name" id="name-1">Player 2</div>
+                <div class="player-score" id="score-1">72</div>
+                <div class="player-current-box">
+                    <div class="player-current-label">Current</div>
+                    <div class="player-current-score" id="current-1">0</div>
+                </div>
+            </div>
+
+            <button class="btn-new">
+                <svg class="btn-icon zoomInOut">
+                    <use xlink:href="feather-sprite.svg#plus-square"></use>
+                </svg>
+                <span style="padding-top: 3px;">New game</span>
+            </button>
+            <button class="btn-roll">
+                <svg class="btn-icon rotate">
+                    <use xlink:href="feather-sprite.svg#square"></use>
+                </svg>
+                <span style="padding-top: 3px;">Roll dice</span>
+            </button>
+            <button class="btn-hold">
+                <svg class="btn-icon upDown">
+                    <use xlink:href="feather-sprite.svg#download"></use>
+                </svg>
+                <span style="padding-top: 3px;">Hold</span>
+            </button>
+
+            <input type="text" placeholder="Enter Winning Score" class="final-score" spellcheck="false" pattern="[0-9]{10}">
+
+            <img src="dice-5.png" alt="Dice" class="dice" id="dice-1"/>
+
+            <img src="dice-5.png" alt="Dice" class="dice" id="dice-2" />
+        </div>
+
+        <script src="challenges.js"></script>
+    </body>
+</html>
